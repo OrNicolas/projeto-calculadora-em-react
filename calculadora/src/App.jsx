@@ -64,28 +64,50 @@ function App() {
   return (
     
     <>
-      <div>
+      <div className='calculadora'>
     
-    <h1>{exibicao}</h1>
+    <div className='exibicao'>
+      <h1>{exibicao}</h1>
+    </div>
 
-    <button onClick={() => ADD('1')}>1</button>
-    <button onClick={() => ADD('2')}>2</button>
-    <button onClick={() => ADD('3')}>3</button>
-    <button onClick={() => ADD('4')}>4</button>
-    <button onClick={() => ADD('5')}>5</button>
-    <button onClick={() => ADD('6')}>6</button>
-    <button onClick={() => ADD('7')}>7</button>
-    <button onClick={() => ADD('8')}>8</button>
-    <button onClick={() => ADD('9')}>9</button>
-    <button onClick={() => ADD('0')}>0</button>
-    
-    <button onClick={clear}>AC</button>
-    
-    <button onClick={()=>escolhaop('+')}>+</button>
-    <button onClick={()=>escolhaop('-')}>-</button>
-    <button onClick={()=>escolhaop('*')}>*</button>
-    <button onClick={()=>escolhaop('/')}>/</button>
-    <button onClick={calculos}>=</button>
+    <div style={{display: 'flex' ,justifyContent: 'center'}} >
+
+      <ul className='botoes'>
+        <li>
+          <div className='grade1'>
+            <button onClick={() => ADD('1')}>1</button>
+            <button onClick={() => ADD('2')}>2</button>
+            <button onClick={() => ADD('3')}>3</button>
+            <button onClick={() => ADD('4')}>4</button>
+          </div>
+        </li>
+        <li>
+          <div className='grade2'>
+            <button onClick={() => ADD('5')}>5</button>
+            <button onClick={() => ADD('6')}>6</button>
+            <button onClick={() => ADD('7')}>7</button>
+            <button onClick={() => ADD('8')}>8</button>
+          </div>
+        </li>
+        <li>
+          <div className='grade3'>
+            <button onClick={() => ADD('9')}>9</button>
+            <button onClick={() => ADD('0')}>0</button>
+            <button onClick={clear}>AC</button>
+            <button onClick={()=>escolhaop('+')}>+</button>
+          </div>
+        </li>
+        <li>
+          <div className='grade4'>
+            <button onClick={()=>escolhaop('-')}>-</button>
+            <button onClick={()=>escolhaop('*')}>*</button>
+            <button onClick={()=>escolhaop('/')}>/</button>
+            <button onClick={calculos}>=</button>
+          </div>
+        </li>
+      </ul>
+
+    </div>
     
     
 
